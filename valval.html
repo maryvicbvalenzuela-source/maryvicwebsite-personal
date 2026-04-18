@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Mary Vic B. Valenzuela | Personal Website</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500;700&family=Playfair+Display:wght@500;700&display=swap" rel="stylesheet">
+
+<!-- ✅ FIX: Font Awesome Added -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<style>
+body{margin:0;font-family:'Montserrat',sans-serif;background:linear-gradient(120deg,#000000,#1b1b1b,#000000);color:#d4af37;}
+nav{background:black;padding:18px;position:fixed;width:100%;top:0;border-bottom:3px solid #d4af37;z-index:1000;text-align:center;}
+.logo{position:absolute;left:20px;top:8px;font-family:'Playfair Display',serif;font-size:26px;font-weight:bold;color:#d4af37;border:2px solid #d4af37;padding:6px 12px;border-radius:8px;}
+.logo span{display:block;font-size:10px;color:white;}
+.services{position:absolute;right:80px;top:10px;font-size:14px;border:1px solid gold;padding:6px 10px;border-radius:6px;cursor:pointer;}
+
+.account-menu{position:absolute;right:20px;top:10px;cursor:pointer;color:gold;font-size:18px;}
+.dropdown{display:none;position:absolute;right:20px;top:50px;background:#111;border:1px solid gold;border-radius:8px;padding:10px;}
+.dropdown div{padding:8px;color:white;cursor:pointer;}
+.dropdown div:hover{background:gold;color:black;}
+
+nav a{color:#d4af37;text-decoration:none;margin:0 18px;font-weight:500;letter-spacing:1px;}
+nav a:hover{ color:white; }
+.page{display:none;padding-top:120px;min-height:100vh;}
+.active{ display:block; }
+.section{background:#111;margin:50px auto;padding:40px;max-width:900px;border-radius:12px;border:1px solid #d4af37;box-shadow:0 0 20px rgba(212,175,55,0.3);position:relative;}
+.section:before{content:"";position:absolute;top:0;left:0;width:100%;height:5px;background:linear-gradient(to right, gold, white, gold);} 
+header{text-align:center;margin-bottom:20px;}
+.profile-container img{width:180px;height:180px;border-radius:50%;border:4px solid #d4af37;object-fit:cover;}
+h1{font-family:'Playfair Display',serif;font-size:42px;color:#fff;}
+p{color:#fff;line-height:1.6;}
+h2{color:#fff;}h3{color:#d4af37;}
+.resume-photo{position:absolute;top:20px;right:20px;}
+.resume-photo img{width:130px;height:130px;border-radius:12px;border:3px solid gold;object-fit:cover;box-shadow:0 0 15px gold;}
+.doc-link{color:gold;cursor:pointer;display:block;margin:5px 0;}
+footer{text-align:center;padding:20px;background:black;border-top:1px solid #d4af37;}
+button{padding:10px 20px;background:black;border:1px solid gold;color:gold;cursor:pointer;margin:5px;}
+i{margin-right:6px;}
+</style>
+</head>
+
+<body>
+
+<nav>
+<div class="logo">MV<span>You Got This!</span></div>
+
+<a href="#" onclick="showPage('home')"><i class="fa-solid fa-house"></i>  Home</a>
+<a href="#" onclick="showPage('profile')"><i class="fas fa-user"></i>  My Profile</a>
+<a href="#" onclick="showPage('resume')"><i class="fas fa-file-alt"></i>  Resume</a>
+<a href="#" onclick="showPage('contact')"><i class="fas fa-envelope"></i>  Contact</a>
+<a href="#" onclick="showPage('settings')"><i class="fas fa-cog"></i>  Settings</a>
+
+<div class="services" onclick="alert('Our Services: Web Development, Personal Portfolio, Digital Projects')">⚡ Services</div>
+
+<div class="account-menu" onclick="toggleMenu()">👤</div>
+<div class="dropdown" id="dropdownMenu">
+<div onclick="alert('Login Successful')">Login</div>
+<div onclick="alert('Signup Successful')">Sign Up</div>
+<div onclick="logout()">Logout</div>
+</div>
+</nav>
+
+<div class="page active" id="home">
+<div class="section">
+<header>
+<div class="profile-container"><img src="mary.jpg"></div>
+<h1>Mary Vic B. Valenzuela</h1>
+</header>
+<p>Welcome! This website is my personal and professional platform where I present my background, skills, and achievements.</p>
+<p>I am committed to continuous improvement, professionalism, and delivering quality work in every opportunity I take.</p>
+</div>
+</div>
+
+<div class="page" id="profile">
+<div class="section">
+<h2>About Me</h2>
+<p><b>"Warmest greetings! Welcome to my personal portfolio. It is my pleasure to have you here."</b></p>
+<p>Silently responsible, hardworking, good communication, and time management.</p>
+</div>
+</div>
+
+<div class="page" id="resume">
+<div class="section">
+<div class="resume-photo"><img src="mary.jpg"></div>
+<h2>📄 Resume</h2>
+
+<h3><i class="fas fa-user-circle"></i>  Personal Information</h3>
+<p>Full Name: Mary Vic B. Valenzuela<br>Age: 21<br>Height: 5'3<br>Civil Status: SINGLE<br>Birth-day: March 22, 2005 <br>Religion: CATHOLIC<br>Blood Type: O+ <br>Contact: 09632251218<br>Email: maryvicb.valenzuela@email.com<br>Address: Paracale, Camarines Norte<br>Location: Philippines</p>
+
+<h3><i class="fas fa-graduation-cap"></i>  Education</h3>
+<p>Senior High School: Batobalani National High School<br>College: Associate Computer Technology</p>
+
+<h3><i class="fas fa-briefcase"></i>  Work Experience</h3>
+<p>On-the-Job Training (OJT)</p>
+<p>Working at house Electronic</p>
+
+<h3><i class="fas fa-tools"></i>  Skills</h3>
+<ul>
+
+<li>Respect</li>
+<li>Fast-Learner</li>
+<li>Good Communication Skills</li>
+<li>Computer Literate</li>
+<li>Time Management</li>
+<li>Teamwork</li>
+</ul>
+
+<h3><i class="fas fa-folder-open"></i>  Important Documents</h3>
+<a class="doc-link" href="#" onclick="openDoc('Resume')"> Resume</a>
+<a class="doc-link" href="#" onclick="openDoc('Certificates')"> Certificates</a>
+<a class="doc-link" href="#" onclick="openDoc('Valid ID')">🪪 Valid ID</a>
+<a class="doc-link" href="#" onclick="openDoc('Application Letter')"> Application Letter</a>
+<a class="doc-link" href="#" onclick="openDoc('PSA Birth Certificates')"> PSA Birth Certificates</a>
+
+<p><b>"Thank you for reviewing my resume."</b></p>
+</div>
+</div>
+
+<div class="page" id="contact">
+<div class="section">
+<h2>📞 Contact Information</h2>
+<p><b><i class="fas fa-phone"></i>  Contact Me:</b> 09632251218</p>
+<p><b><i class="fas fa-envelope"></i>  Email:</b> maryvicb.valenzuela@email.com</p>
+<p><b><i class="fas fa-location-dot"></i>  Location:</b> Camarines Norte, Philippines</p>
+<p><b>Message:</b> Feel free to reach out for opportunities.</p>
+</div>
+</div>
+
+<div class="page" id="settings">
+<div class="section">
+<h2>⚙️ Account Settings</h2>
+
+<button onclick="secureAccess()"><i class="fas fa-lock"></i> 🔒 Locked Password</button>
+<button onclick="logout()"><i class="fas fa-user-switch"></i> 🔄 Switch Account</button>
+<button onclick="alert('Private Account Enabled')"><i class="fas fa-user-shield"></i>  Private Account</button>
+<button onclick="alert('Security Protection Active')"><i class="fas fa-shield-alt"></i>  Secure Account</button>
+<button onclick="alert('Privacy Settings Updated')"><i class="fas fa-user-secret"></i>  Privacy</button>
+<button onclick="alert('Community Guidelines Active')"><i class="fas fa-users"></i>  Community</button>
+</div>
+</div>
+
+<footer>© 2026 Mary Vic B. Valenzuela</footer>
+
+<script>
+function showPage(pageId){
+document.querySelectorAll('.page').forEach(p=>p.classList.remove('active'));
+document.getElementById(pageId).classList.add('active');
+}
+
+function openDoc(doc){
+alert(doc+' file opened');
+}
+
+function secureAccess(){
+var pass=prompt('Enter Password:');
+if(pass==='1234'){alert('Access Granted');}
+else{alert('Access Denied');}
+}
+
+function toggleMenu(){
+var m=document.getElementById('dropdownMenu');
+m.style.display=m.style.display==='block'?'none':'block';
+}
+
+function logout(){
+alert('Logged out successfully');
+}
+</script>
+
+</body>
+</html>
+
